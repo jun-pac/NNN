@@ -1,0 +1,41 @@
+[hyperparameter tuning]
+time ~ 100s
+(3072,100,10) MGD lr:0.01 batch:100 epoch:1 train_acc:0.28 test_acc:0.29
+(3072,100,10) Momentum0.95 lr:0.01 batch:100 epoch:1 train_acc:0.30 test_acc:0.31
+(3072,100,10) Momentum0.95 lr:0.05 batch:100 epoch:1 train_acc:0.106 test_acc:0.105
+(3072,100,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.323 test_acc:0.333
+(3072,100,10) Momentum0.99 lr:0.005 batch:100 epoch:1 train_acc:0.244 test_acc:0.250
+(3072,100,10) Momentum0.9 lr:0.005 batch:100 epoch:1 train_acc:0.313 test_acc:0.323
+(3072,100,10) Momentum0.95 lr:0.002 batch:100 epoch:1 train_acc:0.322 test_acc:0.328 (계속 증가할 것으로 보임)
+(3072,100,10) Momentum0.95 lr:0.001 batch:100 epoch:1 train_acc:0.299 test_acc:0.310
+
+Wide network
+(3072,200,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.333 test_acc:0.343 time:149
+(3072,300,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.333 test_acc:0.343 time:205
+(3072,400,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.331 test_acc:0.341 time:266
+
+Deep network
+(3072,100,100,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.324 test_acc:0.335 time:98
+(3072,100,100,100,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.305 test_acc:0.314 time:104
+
+Deep and wide + more epochs
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.333 test_acc:0.344 time:166
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:2 train_acc:0.370 test_acc:0.375 time:328
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:3 train_acc:0.393 test_acc:0.396 time:491
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:4 train_acc:0.409 test_acc:0.412 time:655
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:5 train_acc:0.421 test_acc:0.422 time:819
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:10 train_acc:0.493 test_acc:0.492 time:1686
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:15 train_acc:0.526 test_acc:0.524 time:2540
+(3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:20 train_acc:0.560 test_acc:0.550 time:3356\
+
+Deep and wide + L2 Regularization
+0.05 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.1 test_acc:0.1 time:
+0.01 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.1 test_acc:0.1 time:
+0.001 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.170 test_acc:0.154 time:
+0.0005 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.237 test_acc:0.241 (5 epoch돌려봤는데, 학습 사실 상 안됨.)
+0.0001 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:1 train_acc:0.315 test_acc:0.344 time:
+0.0001 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:5 train_acc:0.374 test_acc:0.383 time:
+0.0001 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:10 train_acc:0.382 test_acc:0.391 time:
+0.00005 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:10 train_acc:0.430 test_acc:0.450 time:
+0.00001 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:10 train_acc:0.498 test_acc:0.487 time:
+0.00001 (3072,200,200,10) Momentum0.95 lr:0.005 batch:100 epoch:10 train_acc:0.523 test_acc:0.516 time:
